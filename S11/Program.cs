@@ -79,7 +79,7 @@ using (var bd = new Contexto())
                         break;
                     }
 
-                    var estudiante = bd.Estudiante.Find(estudianteId);
+                    var estudiante = bd.Estudiante.FirstOrDefault(e => e.Id == estudianteId);
                     if (estudiante == null)
                     {
                         Console.WriteLine("Estudiante no encontrado.");
